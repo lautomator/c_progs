@@ -4,6 +4,7 @@ main() {
 
     // copy input to output
 
+    printf("Type anything + return ");
     printf("(! to exit)\n");
 
     int c;

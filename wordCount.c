@@ -7,22 +7,33 @@
 
 main() {
 
-    int c, nl, nw, nc, state;
+    int c, newline, newword, newcount, state;
 
     state = OUT;
-    nl = nw = nc = 0;
+    newline = newword = newcount = 0;
 
-    while ((c = getchar()) != EOF) {
+    printf("\'!\' on a new line to get stats and exit\n");
 
-        ++nc;
+    while ((c = getchar()) != EOF || (c = getchar()) != '!') {
+
+        ++newcount;
         if (c == '\n')
-            ++nl;
+            ++newline;
         if (c == ' ' || c == '\n' || c == '\t')
             state = OUT;
+        if (c == '!') {
+            break;
+        }
         else if (state == OUT) {
             state = IN;
-            ++nw;
+            ++newword;
         }
     }
-    printf("%d %d %d\n", nl, nw, nc);
+
+    // Since '!' counts as a valid char, line, and word,
+    // it is omitted from the count, hence: newcount - 1.
+    printf("wordcount: %d\ncharacters: %d\nlines: %d\n",
+        (newword - 1),
+        (newcount - 1),
+        (newline - 1));
 }
