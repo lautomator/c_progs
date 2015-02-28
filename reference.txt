@@ -1,0 +1,8 @@
+compiling and running c programs
+
+-- write your program
+-- compile it:
+    cc myprogram.c
+    (or gcc myprogram.c)
+-- run the executable:
+    ./a.out
