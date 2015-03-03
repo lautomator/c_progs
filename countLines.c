@@ -11,8 +11,6 @@ main() {
     {
         if (c == '\n')
             ++newLine;
-        if (newLine == 3)
-            break;
     }
 
     printf("%d\n", newLine);
