@@ -8,8 +8,7 @@ int getline(char line[], int maxline);
 void copy(char to[], char from[]);
 
 // print the longest line
-main()
-{
+main() {
     int len,
         max;
     char line[MAXLINE],
@@ -29,8 +28,7 @@ main()
     return 0;
 
     // getline
-    int getline(char s[], int lim)
-    {
+    int getline(char s[], int lim) {
 
         int c,
             i;
@@ -49,8 +47,7 @@ main()
     }
 
     // copy
-    void copy(char to[], char from[])
-    {
+    void copy(char to[], char from[]) {
 
         int i;
 
@@ -58,5 +55,4 @@ main()
         while ((to[i] = from[i]) != '\0')
             ++i;
     }
-
 }
